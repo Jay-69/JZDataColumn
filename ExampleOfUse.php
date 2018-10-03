@@ -23,7 +23,7 @@ Pjax::begin(['id' => 'pjax_id_1', 'options'=> ['class'=>'pjax', 'loader'=>'loade
     ]); 
 Pjax::end();
 
-//Example of action for editin attribute
+//Example of action for edit attribute
 public function actionJzDataColumn(){
         if(isset($_GET['data'])){
             $json=json_decode($_GET['data']);
@@ -41,6 +41,6 @@ public function actionJzDataColumn(){
                         return json_encode(['msg'=>0,'val'=>$error;
                     }                       
                 } else {return json_encode(['msg'=>0,'val'=>'No model found.']);}
-            } else {return json_encode(['msg'=>0,'val'=>'No correct data set provided.']);}
+            } else {return json_encode(['msg'=>0,'val'=>'No correct dataset provided.']);}
         } else {return json_encode(['msg'=>0,'val'=>'No data provided.']);}
     }
