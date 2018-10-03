@@ -1,0 +1,7 @@
+.jzdc_empty{color: navy; cursor:pointer;}
+.jzdc_edit{text-align:left; width:200px;}
+.jzdc_info{color:red;}
+.jzdc_save{color:green;}
+.jzdc_save:hover{cursor:pointer; text-decoration: underline;}
+.jzdc_deny{color:red;}
+.jzdc_deny:hover{cursor:pointer; text-decoration: underline;}
