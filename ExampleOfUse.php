@@ -24,7 +24,7 @@ Pjax::begin(['id' => 'pjax_id_1', 'options'=> ['class'=>'pjax', 'loader'=>'loade
 Pjax::end();
 
 //Example of action for edit attribute
-public function actionJzDataColumn(){
+    public function actionJzDataColumn(){
         if(isset($_GET['data'])){
             $json=json_decode($_GET['data']);
             if(isset($json->id) && isset($json->attribute) && isset($json->value)){
@@ -32,14 +32,8 @@ public function actionJzDataColumn(){
                 if(isset($model)){
                     $attribute=$json->attribute;
                     $model->$attribute=trim($json->value);//variable variable used!!!
-                    if($model->save()){
-                        return json_encode(['msg'=>1,'val'=>$model->$attribute]);
-                    } else {
-                        //The following is just to get the first error.
-                        $errors=array_values($model->errors);
-                        if($errors[0][0]!=''){$error=$errors[0][0];} else {$error='Some data not correct.';}
-                        return json_encode(['msg'=>0,'val'=>$error;
-                    }                       
+                    if($model->save()){return json_encode(['msg'=>1,'val'=>$model->$attribute]);
+                    } else {return json_encode(['msg'=>0,'val'=>$model->firstErrors[$attribute]]);}  
                 } else {return json_encode(['msg'=>0,'val'=>'No model found.']);}
             } else {return json_encode(['msg'=>0,'val'=>'No correct dataset provided.']);}
         } else {return json_encode(['msg'=>0,'val'=>'No data provided.']);}
