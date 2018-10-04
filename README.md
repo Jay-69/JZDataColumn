@@ -14,3 +14,5 @@ TO INSTALL:
 TO USE:
 
 See ExampleOfUse.php
+
+![alt text](https://raw.githubusercontent.com/Jay-69/JZDataColumn/blob/master/Screen%20Shot.png)
