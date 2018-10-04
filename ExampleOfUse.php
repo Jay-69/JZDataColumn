@@ -6,10 +6,6 @@ Pjax::begin(['id' => 'pjax_id_1', 'options'=> ['class'=>'pjax', 'loader'=>'loade
         'options'=>['class'=>'grid-view','id'=>'grid_id_1'],
         'summaryOptions'=>['style'=>'text-align:right;'],
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn',
-                'headerOptions' => ['width' => '40','style'=>'text-align:center;'],
-                'contentOptions' => ['align'=>'right']
-            ],
 			      [
         				'class' => 'vendor\jz\JZDataColumn',
                 'attribute' => 'tbl_attribute',
