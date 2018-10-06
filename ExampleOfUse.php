@@ -9,7 +9,7 @@ Pjax::begin(['id' => 'pjax_id_1', 'options'=> ['class'=>'pjax', 'loader'=>'loade
 			      [
         				'class' => 'vendor\jz\JZDataColumn',
                 'attribute' => 'tbl_attribute',
-				        'editable' => true,	//even it is true by default, better to keep just for information
+				        'editable' => true,
 				        'editUrl' => Url::to(['controller/jzdatacolumn']),
       				  'emptyLabel' => 'Click me to add',
 				        'loaderPath' => Yii::getAlias('@cssImg').'/img_loader.gif',
