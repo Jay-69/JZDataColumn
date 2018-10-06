@@ -21,9 +21,9 @@ use yii\helpers\Html;
 class JZDataColumn extends DataColumn{
 
     /**
-     * @var bool if set to true (default) makes possible to edit the value of the attribute.
+     * @var bool if set to true makes possible to edit the value of the attribute.
      */
-	public $editable=true;
+	public $editable=false;
     /**
      * @var string url to action responsible for editin of the attribute.
      */
